@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Registrar Vuelo</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Registrar Vuelo</h1>
+    <form action="insertar_vuelos.php" method="POST">
+        <label>Origen:</label>
+        <input type="text" name="origen" required>
+
+        <label>Destino:</label>
+        <input type="text" name="destino" required>
+
+        <label>Fecha:</label>
+        <input type="date" name="fecha" required>
+
+        <label>Hora:</label>
+        <input type="time" name="hora" required>
+
+        <label>Avión:</label>
+        <select name="id_avion" required>
+            <option value="">Selecciona un avión</option>
+            <?php
+            include '../conexion.php';
+            $res = $conn->query("SELECT id, modelo, matricula FROM aviones");
+            while ($row = $res->fetch_assoc()) {
+                echo "<option value='{$row['id']}'>{$row['modelo']} ({$row['matricula']})</option>";
+            }
+            ?>
+        </select>
+
+        <button type="submit">Guardar Vuelo</button>
+    </form>
+    <a href="lista_vuelos.php">Ver vuelos registrados</a>
+</body>
+</html>

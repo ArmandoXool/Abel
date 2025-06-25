@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Registrar Cliente</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Registrar Cliente</h1>
+    <form action="insertar_clientes.php" method="POST">
+        <label>Nombre:</label>
+        <input type="text" name="nombre" required>
+
+        <label>Correo:</label>
+        <input type="email" name="correo" required>
+
+        <label>Teléfono:</label>
+        <input type="text" name="telefono" required>
+
+        <button type="submit">Guardar Cliente</button>
+    </form>
+    <a href="lista_clientes.php">Ver clientes registrados</a>
+</body>
+</html>
