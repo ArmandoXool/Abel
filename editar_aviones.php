@@ -14,7 +14,7 @@ $avion = $resultado->fetch_assoc();
 </head>
 <body>
     <h1>Editar Avión</h1>
-    <form action="aviones_update.php" method="POST">
+    <form action="update_aviones.php" method="POST">
         <input type="hidden" name="id" value="<?= $avion['id'] ?>">
 
         <label>Modelo:</label>

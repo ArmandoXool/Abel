@@ -33,5 +33,6 @@ $resultado = $conn->query("SELECT * FROM aviones");
         </tr>
         <?php endwhile; ?>
     </table>
+    <?php include 'footer.php'; ?>
 </body>
 </html>

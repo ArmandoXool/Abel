@@ -1,7 +1,7 @@
 <?php
 $host = "localhost";
 $user = "root";
-$pass = "12345678";
+$pass = "";
 $db = "compania_aerea";
 
 $conn = new mysqli($host, $user, $pass, $db);

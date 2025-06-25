@@ -30,6 +30,7 @@ CREATE TABLE `aviones` (
   `id` int(11) NOT NULL,
   `modelo` varchar(100) DEFAULT NULL,
   `capacidad` int(11) DEFAULT NULL,
+  `matricula` varchar(100) DEFAULT NULL,
   `fabricante` varchar(100) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
