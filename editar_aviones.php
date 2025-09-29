@@ -28,5 +28,6 @@ $avion = $resultado->fetch_assoc();
 
         <button type="submit">Guardar Cambios</button>
     </form>
+    <a href="lista_aviones.php">Volver a la lista de aviones</a>
 </body>
 </html>
